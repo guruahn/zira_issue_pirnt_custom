@@ -21,7 +21,7 @@ function changeStyle(){
 		//console.log("ghx_card.length: "+ghx_card);
 		for(var i=0, len=ghx_card.length; i<len; i++)
 	    {
-	        ghx_card[i].style.borderColor = items.favoriteColor;
+	        ghx_card[i].style.borderColor = "#" + items.favoriteColor;
 	        
 	    }
 		
