@@ -1,8 +1,12 @@
 @charset "utf-8";
 
+/*레이아웃*/
+.ghx-print-card-body .ghx-print-small{
+	width: 918px!important;
+}
 /*Card*/
 .ghx-print-card-body .ghx-print-small .ghx-card{
-	width: 221px!important;
+	width: 290px!important;
   margin-right: 1px!important;
   margin-bottom: 1px;
   border-width: 7px;
@@ -29,6 +33,6 @@
 }
 /*Border*/
 .ghx-print-card-body .ghx-print-small .ghx-card-color{
-	border-left-width: 10px !important;
+	border-left-width: 0px !important;
 	left:0!important;
 }
