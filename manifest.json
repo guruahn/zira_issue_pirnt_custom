@@ -3,7 +3,7 @@
     
     "name": "Zira Print Style Custom",
     "description": "change font-family for print",
-    "version": "1.0",
+    "version": "1.2",
     "manifest_version": 2,
     "background" : {
        "scripts": ["background.js"],
@@ -13,13 +13,22 @@
         {
             "matches": ["http://*.atlassian.net/*", "https://*.atlassian.net/*", "<all_urls>"],
             "match_about_blank": true,
-            "css": ["zira_print.css"]
-            //"js": ["webfont.js","content.js"]
+            "css": ["zira_print.css"],
+            "js": ["content.js"]
         }
     ],
     "page_action": {
         "default_icon": "icon.png",
         "default_title": "Zira Print Style Custom"
     },
-    "permissions": [ "declarativeContent", "fontSettings" ]
+    "options_ui": {
+        // Required.
+        "page": "options.html",
+        // Recommended.
+        "chrome_style": true
+        // Not recommended; only provided for backwards compatibility,
+        // and will be unsupported in a future version of Chrome (TBD).
+        //"open_in_tab": true
+    },
+    "permissions": [ "declarativeContent", "fontSettings", "storage" ]
 }

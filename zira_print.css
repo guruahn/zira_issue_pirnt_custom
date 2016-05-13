@@ -2,10 +2,12 @@
 
 /*Card*/
 .ghx-print-card-body .ghx-print-small .ghx-card{
-	width: 30%!important;
+	width: 221px!important;
   margin-right: 1px!important;
   margin-bottom: 1px;
-  border: 2px solid #949191;
+  border-width: 7px;
+  border-style: solid;
+  border-color: #949191
 }
 /*Title*/
 .ghx-print-card-body .ghx-print-small .ghx-card-summary
