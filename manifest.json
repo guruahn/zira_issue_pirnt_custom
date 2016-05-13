@@ -3,7 +3,7 @@
     
     "name": "Zira Print Style Custom",
     "description": "change font-family for print",
-    "version": "1.2",
+    "version": "1.3",
     "manifest_version": 2,
     "background" : {
        "scripts": ["background.js"],
