@@ -13,26 +13,38 @@
   border-style: solid;
   border-color: #949191
 }
+/*Card Border*/
+.ghx-print-card-body .ghx-print-small .ghx-card-color{
+	border-left-width: 0px !important;
+	left:0!important;
+}
 /*Title*/
 .ghx-print-card-body .ghx-print-small .ghx-card-summary
 {
     /*font-family: "Nanum Gothic", 맑은 고딕,Georgia,Cambria,"Times New Roman",Times,serif !important;*/
-    font-size: 1.5rem!important;
-    max-height: 90.4px !important;
+    font-size: 1.5rem;
+    max-height: 90.4px;
 }
 
-/*Component*/
-.ghx-print-card-body .ghx-print-small .ghx-card-extra-fields
-{
-	font-size: 1rem!important;
-	
+/*Component Label*/
+.ghx-print-card-body .ghx-print-small .ghx-card-extra-fields .ghx-card-xfield-label{
+	display: none;
 }
+
+/*Component Value*/
 .ghx-print-card-body .ghx-print-small .ghx-card-extra-fields .ghx-card-xfield-value{
+	padding: 0;
+	font-size: 1rem!important;
 	font-weight: bold!important;
 	color: #000!important;
 }
-/*Border*/
-.ghx-print-card-body .ghx-print-small .ghx-card-color{
-	border-left-width: 0px !important;
-	left:0!important;
+/*Icon*/
+.ghx-print-card-body .ghx-print-small .ghx-card-header .ghx-card-icon, 
+.ghx-print-card-body .ghx-print-small .ghx-card-header .ghx-card-icon img{
+    height: 25px;
+    width: 25px;
+}
+/*Project Name*/
+.ghx-print-card-body .ghx-print-small .ghx-card-header .ghx-card-key{
+	font-size: 18px!important;
 }
