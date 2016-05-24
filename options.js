@@ -2,9 +2,11 @@
 function save_options() {
   var color = document.getElementById('color').value;
   var titleSize = document.getElementById('title-size').value;
+  var ticketType = document.getElementById('ticket-type').value;
   chrome.storage.sync.set({
     favoriteColor: color,
-    titleSize: titleSize
+    titleSize: titleSize,
+    ticketType: ticketType
   }, function() {
     // Update status to let user know options were saved.
     var status = document.getElementById('status');
@@ -21,10 +23,12 @@ function restore_options() {
   // Use default value color = 'FF0000' and likesColor = true.
   chrome.storage.sync.get({
     favoriteColor: 'FF0000',
-    titleSize: 'xl'
+    titleSize: 'xl',
+    ticketType: 'default'
   }, function(items) {
     document.getElementById('color').value = items.favoriteColor;
     document.getElementById('title-size').value = items.titleSize;
+    document.getElementById('ticket-type').value = items.ticketType;
   });
 }
 document.addEventListener('DOMContentLoaded', restore_options);

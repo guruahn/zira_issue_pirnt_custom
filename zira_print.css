@@ -48,3 +48,20 @@
 .ghx-print-card-body .ghx-print-small .ghx-card-header .ghx-card-key{
 	font-size: 18px!important;
 }
+
+/* Profile image */
+.ghx-print-card-body .ghx-print-small .ghx-card-header .ghx-row-end .ghx-avatar-img {
+	border-radius: 30px!important;
+	height: 30px!important;
+	width: 30px!important;
+	line-height: 30px!important;
+}
+
+/*
+*	빈 티켓 출력용
+**/
+.ghx-print-empty .ghx-print-small .ghx-card-summary{
+	height: 114.4px;
+  max-height: 114.4px;
+  visibility: hidden;
+}

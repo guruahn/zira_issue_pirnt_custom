@@ -2,6 +2,8 @@
 <html>
 <head>
   <title>My Test Extension Options</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
   <style>
     body: { padding: 20px; }
   </style>
@@ -15,13 +17,20 @@
    <option value="008000">green</option>
    <option value="00ccff">sky-blue</option>
    <option value="2c45ff">blue</option>
-   <option value="FFFF00">yellow</option>
+   <option value="ffcb05">yellow</option>
    <option value="FFA500">orange</option>
    <option value="800080">purple</option>
   </select>
   <br />
   <br />
-  Issue Title size : 
+  Ticket Type : 
+  <select id="ticket-type">
+   <option value="default">기본 티켓</option>
+   <option value="empty">비어있는 티켓</option>
+  </select>
+  <br />
+  <br />
+  Ticket Title size : 
   <select id="title-size">
    <option value="s">small</option>
    <option value="m">medium</option>
