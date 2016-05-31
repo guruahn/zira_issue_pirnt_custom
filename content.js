@@ -39,36 +39,40 @@ var title_size_config = {
 	}
 }
 function changeStyle(){
-	chrome.storage.sync.get({
-		favoriteColor: 'red',
-		titleSize: 'l',
-		ticketType: 'default'
-	}, function(items) {
-		//console.log(items.favoriteColor);
-		var ghx_card = document.getElementsByClassName('ghx-card');
-		//console.log("ghx_card.length: "+ghx_card);
-		for(var i=0, len=ghx_card.length; i<len; i++)
-    {
-    	//console.log("#" + items.favoriteColor);
-    	//console.log(items.titleSize + "rem");
-        ghx_card[i].style.borderColor = "#" + items.favoriteColor;
 
-        //title setting
-        var ghx_card_summary = ghx_card[i].getElementsByClassName("ghx-card-summary")[0];
-        //console.log(title_size_config[items.titleSize].fontSize);
-        ghx_card_summary.style.fontSize = title_size_config[items.titleSize].fontSize;
-        ghx_card_summary.style.maxHeight = title_size_config[items.titleSize].maxHeight;
-        ghx_card_summary.style.margin = title_size_config[items.titleSize].margin;
-        ghx_card[i].style.height = title_size_config[items.titleSize].itemHeight;
-    }
+	if( document.getElementById("jira") ){
+		chrome.storage.sync.get({
+			favoriteColor: 'red',
+			titleSize: 'l',
+			ticketType: 'default'
+		}, function(items) {
+			//console.log(items.favoriteColor);
+			var ghx_card = document.getElementsByClassName('ghx-card');
+			//console.log("ghx_card.length: "+ghx_card);
+			for(var i=0, len=ghx_card.length; i<len; i++)
+	    {
+	    	//console.log("#" + items.favoriteColor);
+	    	//console.log(items.titleSize + "rem");
+	        ghx_card[i].style.borderColor = "#" + items.favoriteColor;
 
-    //ticket type setting
-    var body_class_name = "ghx-print-card-body";
-   	if( body_class_name.indexOf("ghx-print-" + items.ticketType)  == -1 ){
-   		document.getElementById("jira").className = body_class_name + " ghx-print-" + items.ticketType;
-   	}
-    
+	        //title setting
+	        var ghx_card_summary = ghx_card[i].getElementsByClassName("ghx-card-summary")[0];
+	        //console.log(title_size_config[items.titleSize].fontSize);
+	        ghx_card_summary.style.fontSize = title_size_config[items.titleSize].fontSize;
+	        ghx_card_summary.style.maxHeight = title_size_config[items.titleSize].maxHeight;
+	        ghx_card_summary.style.margin = title_size_config[items.titleSize].margin;
+	        ghx_card[i].style.height = title_size_config[items.titleSize].itemHeight;
+	    }
 
-		
-	});
+	    //ticket type setting
+	    var body_class_name = "ghx-print-card-body";
+	   	if( body_class_name.indexOf("ghx-print-" + items.ticketType)  == -1 ){
+	   		document.getElementById("jira").className = body_class_name + " ghx-print-" + items.ticketType;
+	   	}
+	    
+
+			
+		});
+	}
+	
 }

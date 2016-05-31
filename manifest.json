@@ -3,7 +3,7 @@
     
     "name": "Zira Print Style Custom",
     "description": "change zira card style for print",
-    "version": "1.4",
+    "version": "1.5",
     "manifest_version": 2,
     "background" : {
        "scripts": ["background.js"],
