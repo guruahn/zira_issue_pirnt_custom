@@ -42,6 +42,10 @@
 	font-weight: bold!important;
 	color: #000!important;
 }
+/*Header*/
+.ghx-print-card-body .ghx-print-small .ghx-card-header{
+	height: 42px!important;
+}
 /*Icon*/
 .ghx-print-card-body .ghx-print-small .ghx-card-header .ghx-card-icon, 
 .ghx-print-card-body .ghx-print-small .ghx-card-header .ghx-card-icon img{
@@ -56,8 +60,8 @@
 /* Profile image */
 .ghx-print-card-body .ghx-print-small .ghx-card-header .ghx-row-end .ghx-avatar-img {
 	border-radius: 30px!important;
-	height: 30px!important;
-	width: 30px!important;
+	height: 50px!important;
+	width: 50px!important;
 	line-height: 30px!important;
 }
 
